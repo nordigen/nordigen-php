@@ -10,7 +10,7 @@
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
-        "nordigen/nordigen-php": "@dev"
+        "nordigen/nordigen-php": "^1.0"
     },
     "require-dev": {
         "laravel/sail": "^1.0.1",
@@ -47,13 +47,6 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../",
-            "options": { "symlink": true }
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
