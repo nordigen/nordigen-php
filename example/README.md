@@ -5,13 +5,6 @@
 You'll need to get your `SECRET_ID` and `SECRET_KEY` from the [Nordigen's Open Banking Portal](https://ob.nordigen.com/).
 Add secrets to `.env` file or pass secrets as a string to `app/Providers/AppServiceProvider.php` to `NordigenService`.
 
-```php
-// Pass secretId and secretKey to NordigenClient instance.
-// client secrets can be generated from OB portal
-$secretId  = "YOUR_SECRET_ID";
-$secretKey = "YOUR_SECRET_KEY";
-$client = new NordigenClient($secretId, $secretKey);
-```
 
 To initialize session with a bank, you have to specify `country` (a two-letter country code) and specify your `redirectUrl`.
 In the `routes/web.php` edit country parameter.

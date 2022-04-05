@@ -24,14 +24,14 @@ Route::get('/agreements/{id}', function (NordigenService $nordigen) {
     $id = request()->route()->parameter('id');
     $redirectUrl = 'http://localhost:8000/results';
     $data = $nordigen->getSessionData($redirectUrl, $id);
-    session(['requisitionId' => $data["requisitionId"]]);
+    session(['requisitionId' => $data["requisition_id"]]);
     return redirect()->away($data["link"]);
 });
 
 
 Route::get('/results', function (NordigenService $nordigen) {
     $requisitionId = request()->session()->get('requisitionId');
-    if(!$requisitionId) throw new Exception('Institution id not found.');
+    if(!$requisitionId) throw new Exception('Requisition id not found.');
 
     $data = $nordigen->getAccountData($requisitionId);
     return response()->json($data, 200, [], JSON_PRETTY_PRINT)

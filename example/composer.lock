@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d91a63e3ed7254fbce02879f315a2bcd",
+    "content-hash": "6550ed3108638cd08c3dad0ae5364c93",
     "packages": [
         {
             "name": "brick/math",
@@ -1695,66 +1695,6 @@
             "time": "2022-03-14T12:44:37+00:00"
         },
         {
-            "name": "myclabs/php-enum",
-            "version": "1.8.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/php-enum.git",
-                "reference": "b942d263c641ddb5190929ff840c68f78713e937"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/b942d263c641ddb5190929ff840c68f78713e937",
-                "reference": "b942d263c641ddb5190929ff840c68f78713e937",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "php": "^7.3 || ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.5",
-                "squizlabs/php_codesniffer": "1.*",
-                "vimeo/psalm": "^4.6.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MyCLabs\\Enum\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP Enum contributors",
-                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
-                }
-            ],
-            "description": "PHP Enum implementation",
-            "homepage": "http://github.com/myclabs/php-enum",
-            "keywords": [
-                "enum"
-            ],
-            "support": {
-                "issues": "https://github.com/myclabs/php-enum/issues",
-                "source": "https://github.com/myclabs/php-enum/tree/1.8.3"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/mnapoli",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/myclabs/php-enum",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-07-05T08:18:36+00:00"
-        },
-        {
             "name": "nesbot/carbon",
             "version": "2.57.0",
             "source": {
@@ -2052,52 +1992,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
             },
             "time": "2021-11-30T19:35:32+00:00"
-        },
-        {
-            "name": "nordigen/nordigen-php",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "..",
-                "reference": "488ca6c7d23ee4ed707db2a2ffdd06b217ac5490"
-            },
-            "require": {
-                "ext-json": "*",
-                "guzzlehttp/guzzle": "^7.3",
-                "myclabs/php-enum": "^1.8"
-            },
-            "require-dev": {
-                "blastcloud/guzzler": "^2.0",
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Nordigen\\NordigenPHP\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nordigen Solutions",
-                    "email": "support@nordigen.com",
-                    "homepage": "https://nordigen.com"
-                }
-            ],
-            "description": "Nordigen official API client for PHP",
-            "homepage": "https://nordigen.com",
-            "keywords": [
-                "api",
-                "nordigen",
-                "open banking",
-                "psd2"
-            ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
         },
         {
             "name": "phpoption/phpoption",
@@ -5746,9 +5640,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "nordigen/nordigen-php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
