@@ -8,11 +8,11 @@ Before starting to use API you will need to create a new secret and get your `SE
 
 
 ## Requirements
----
+
 * PHP >= 7.4
 
 ## Installation
----
+
 Install library via composer:
 
 ```sh
@@ -24,14 +24,19 @@ composer require nordigen/nordigen-php
 Laravel example application can be found in `example` directory
 
 ## Quickstart
----
+
+To use the library, use Composer's [autoload](https://getcomposer.org/doc/01-basic-usage.md#autoloading):
+
+```php
+require_once('vendor/autoload.php');
+```
 
 ```php
 // Get secretId and secretKey from ob.nordigen.com portal and pass them to NordigenClient
 $secretId  = "YOUR_SECRET_ID";
 $secretKey = "YOUR_SECRET_KEY";
 
-$client = new NordigenClient($secretId, $secretKey);
+$client = new \Nordigen\NordigenPHP\API\NordigenClient($secretId, $secretKey);
 
 // Generate new access token. Token is valid for 24 hours
 // Token is automatically injected into every response
