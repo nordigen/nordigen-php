@@ -1,0 +1,34 @@
+{
+    "name": "nordigen/nordigen-php",
+    "description": "Nordigen official API client for PHP",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nordigen Solutions",
+            "email": "support@nordigen.com",
+            "homepage": "https://nordigen.com"
+        }
+    ],
+    "homepage": "https://nordigen.com",
+    "license": "MIT",
+    "keywords": [
+        "nordigen",
+        "open banking",
+        "psd2",
+        "api"
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.3",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "blastcloud/guzzler": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nordigen\\NordigenPHP\\": "src/"
+        }
+    }
+}
