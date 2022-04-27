@@ -56,10 +56,10 @@ $institutions = $client->institution->getInstitutionsByCountry("LV");
 // Institution id can be gathered from getInstitutions response.
 // Example Revolut ID
 $institutionId = "REVOLUT_REVOGB21";
-$redirectUri = "https://nordigen.com"
+$redirectUri = "https://nordigen.com";
 
 // Initialize new bank connection session
-$session = $client->initSession($institutionId, $redirectUr);
+$session = $client->initSession($institutionId, $redirectUri);
 
 // Get link to authorize in the bank
 // Authorize with your bank via this link, to gain access to account data
