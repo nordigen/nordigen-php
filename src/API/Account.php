@@ -67,7 +67,7 @@ class Account {
         if($dateFrom) $params['query']['date_from'] = $dateFrom;
         if($dateTo)   $params['query']['date_to']   = $dateTo;
 
-        $response = $this->requestHandler->get("accounts/{$this->accountId}/transactions/", [$params]);
+        $response = $this->requestHandler->get("accounts/{$this->accountId}/transactions/", $params);
         $json = json_decode($response->getBody()->getContents(), true);
         return $json;
     }
