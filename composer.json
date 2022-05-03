@@ -31,6 +31,5 @@
         "psr-4": {
             "Nordigen\\NordigenPHP\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
