@@ -16,10 +16,8 @@ class NordigenClient
     public EndUserAgreement $endUserAgreement;
     public Requisition $requisition;
 
-    private string $accessToken;
     private string $refreshToken;
     private string $requisitionLink;
-
 
     public function __construct(string $secretId, string $secretKey, ?ClientInterface $client = null)
     {
@@ -102,8 +100,7 @@ class NordigenClient
             ]
         ]);
         $json = json_decode($response->getBody()->getContents(), true);
-        $this->requestHandler->setAccessToken($json["access"]);
-        $this->accessToken = $json["access"];
+        $this->setAccessToken($json["access"]);
         $this->refreshToken = $json["refresh"];
         return $json;
     }
@@ -128,23 +125,23 @@ class NordigenClient
     }
 
     /**
-     * Get the value of accessToken
+     * Get the value of accessToken in the request handler.
      *
      * @return string
      */
     public function getAccessToken(): string
     {
-        return $this->accessToken;
+        return $this->requestHandler->getAccessToken();
     }
 
     /**
-     * Set the value of accessToken
+     * Set the value of accessToken in the request handler.
      *
      * @return  self
      */
     public function setAccessToken($accessToken): self
     {
-        $this->accessToken = $accessToken;
+        $this->requestHandler->setAccessToken($accessToken);
         return $this;
     }
 
