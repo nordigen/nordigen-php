@@ -44,7 +44,7 @@ class NordigenService
             $accountData[] = [
                 "metaData"     => $account->getAccountMetaData(),
                 "details"      => $account->getAccountDetails(),
-                "balances"     => $account->getAccountDetails(),
+                "balances"     => $account->getAccountBalances(),
                 "transactions" => $account->getAccountTransactions()
             ];
         }
