@@ -37,6 +37,15 @@ class NordigenClient
         return new Account($this->requestHandler, $accountId);
     }
 
+    /**
+     * @param string $accountId Account identifier.
+     *
+     * @return PremiumAccount
+     */
+    public function premiumAccount(string $accountId): PremiumAccount
+    {
+        return new PremiumAccount($this->requestHandler, $accountId);
+    }
 
     /**
         * Perform all the necessary steps in order to retrieve the URL for user authentication. <br>
