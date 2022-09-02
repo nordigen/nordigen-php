@@ -72,4 +72,24 @@ class Account {
         return $json;
     }
 
+    /**
+     * Retrieve premium account transactions.
+     * @param string $accountId
+     *
+     * @return array
+     */
+    public function getPremiumAccountTransactions(?string $country = null, ?string $dateFrom = null, ?string $dateTo = null): array
+    {
+        $params = [
+            'query' => []
+        ];
+
+        if ($country)  $params['query']['country']   = $country;
+        if ($dateFrom) $params['query']['date_from'] = $dateFrom;
+        if ($dateTo)   $params['query']['date_to']   = $dateTo;
+
+        $response = $this->requestHandler->get("accounts/premium/{$this->accountId}/transactions/", $params);
+        $json = json_decode($response->getBody()->getContents(), true);
+        return $json;
+    }
 }
