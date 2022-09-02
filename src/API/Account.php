@@ -74,7 +74,9 @@ class Account {
 
     /**
      * Retrieve premium account transactions.
-     * @param string $accountId
+     * @param ?string $country
+     * @param ?string $dateFrom
+     * @param ?string $dateTo
      *
      * @return array
      */
