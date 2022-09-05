@@ -39,28 +39,34 @@ class NordigenClient
 
 
     /**
-        * Perform all the necessary steps in order to retrieve the URL for user authentication. <br>
-        * A new End-User agreement and requisition will be created.
-        *
-        * The result will be an array containing the URL for user authentication and the IDs of the
-        * newly created requisition and End-user agreement.
-        * @param string $institutionIdentifier ID of the Institution.
-        * @param int $maxHistoricalDays Maximum number of days of transaction data to retrieve.
-        * @param string $endUserId The ID of the End-user in the client's system.
-        * @param string $reference
-        * @param string $redirect
-        * @param AccessScope[] $accessScope
-        * @param string|null $userLanguage
-        *
-        * @return array
-    */
+     * Perform all the necessary steps in order to retrieve the URL for user authentication. <br>
+     * A new End-User agreement and requisition will be created.
+     *
+     * The result will be an array containing the URL for user authentication and the IDs of the
+     * newly created requisition and End-user agreement.
+     * @param string $institutionIdentifier ID of the Institution.
+     * @param int $maxHistoricalDays Maximum number of days of transaction data to retrieve.
+     * @param string $endUserId The ID of the End-user in the client's system.
+     * @param string $reference Additional ID to identify the End-user. This value will be appended to the redirect.
+     * @param string $redirect The URI where the End-user will be redirected to after authentication.
+     * @param AccessScope[] $accessScope The requested access scope. All by default. See Enums\AccessScope for possible values.
+     * @param string|null $userLanguage Language to use in views. Two-letter country code (ISO 639-1).
+     * @param string|null $ssn SSN (social security number) field to verify ownership of the account.
+     * @param bool|null $accountSelection Option to enable account selection view for the end user.
+     * @param bool|null $redirectImmediate Option to enable redirect back to the client after account list received
+     *
+     * @return array
+     */
     public function initSession(
         string  $institutionIdentifier,
         string  $redirect,
         int     $maxHistoricalDays = 90,
         ?string $reference = null,
         ?array $accessScopes = ['details', 'balances', 'transactions'],
-        ?string $userLanguage = null
+        ?string $userLanguage = null,
+        ?string $ssn = null,
+        ?bool $accountSelection = null,
+        ?bool $redirectImmediate = false
     ): array
     {
         $endUserAgreement = $this->endUserAgreement->createEndUserAgreement(
@@ -73,7 +79,10 @@ class NordigenClient
             $institutionIdentifier,
             $endUserAgreement["id"],
             $reference,
-            $userLanguage
+            $userLanguage,
+            $ssn,
+            $accountSelection,
+            $redirectImmediate
         );
         $result = [
             'link' => $requisition["link"],
