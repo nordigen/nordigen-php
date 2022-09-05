@@ -66,7 +66,7 @@ class NordigenClient
         ?string $userLanguage = null,
         ?string $ssn = null,
         ?bool $accountSelection = null,
-        ?bool $redirectImmediate = false
+        ?bool $redirectImmediate = null
     ): array
     {
         $endUserAgreement = $this->endUserAgreement->createEndUserAgreement(
