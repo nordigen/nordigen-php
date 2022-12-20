@@ -92,6 +92,10 @@ $transactions = $account->getAccountTransactions();
 
 // Optional. You can filter transactions by specific date range
 $transactions = $account->getAccountTransactions("2021-12-01", "2022-01-30");
+
+// Get premium transactions
+// Optional parameters country, dateFrom, dateTo
+$premiumTransactions = $account->getPremiumAccountTransactions();
 ```
 
 ## Support
