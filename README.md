@@ -48,7 +48,7 @@ $accessToken = $client->getAccessToken();
 $refreshToken = $client->getRefreshToken();
 
 // Exchange refresh token for new access token
-$newToken = $client->exchangeToken($accessToken);
+$newToken = $client->refreshAccessToken($refreshToken);
 
 // Get list of institutions by country. Country should be in ISO 3166 standard.
 $institutions = $client->institution->getInstitutionsByCountry("LV");
