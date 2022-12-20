@@ -98,6 +98,8 @@ $transactions = $account->getAccountTransactions("2021-12-01", "2022-01-30");
 $premiumTransactions = $account->getPremiumAccountTransactions();
 ```
 
+In order to use Premium endpoin please contact our [support](support@nordigen.com)
+
 ## Support
 
 For any inquiries please contact support at [support@nordigen.com](support@nordigen.com) or create an issue in the repository.
