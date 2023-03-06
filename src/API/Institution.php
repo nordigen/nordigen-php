@@ -14,6 +14,18 @@ class Institution
     }
 
     /**
+     * Get list of all institutions.
+     * 
+     * @return array
+     */
+    public function getInstitutions(): array
+    {
+        $response = $this->requestHandler->get('institutions/');
+        $json = json_decode($response->getBody()->getContents(), true);
+        return $json;
+    }
+
+    /**
      * Retrieve a list of Institutions by country.
      * @param string $countryCode ISO 3166 two-character country code
      *
