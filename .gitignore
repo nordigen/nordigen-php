@@ -468,3 +468,6 @@ composer.phar
 
 # phpunit cache
 .phpunit.result.cache
+
+# environment files
+.env
