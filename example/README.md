@@ -2,7 +2,7 @@
 
 ## Set-up
 ---
-You'll need to get your `SECRET_ID` and `SECRET_KEY` from the [Nordigen's Open Banking Portal](https://ob.nordigen.com/).
+You'll need to get your `SECRET_ID` and `SECRET_KEY` from the [GoCardless Bank Account Data Portal](https://bankaccountdata.gocardless.com/user-secrets/).
 Create  `.env` file and add secrets to the file or pass secrets as a string to `app/Providers/AppServiceProvider.php` to `NordigenService`.
 Generate encryption APP_KEY if you don't have one `php artisan key:generate`
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.3] - 2023-06-22
+
+- Changed outdated Nordigen URLs to GoCardless
+
 ## [1.0.2] - 2022-05-03
 
 - Move access token to request handler
