@@ -1,10 +1,10 @@
 # Nordigen PHP Library
 
-This is official PHP client library for [Nordigen](https://nordigen.com/en).
+This is official PHP client library for [GoCardless Bank Account Data](https://gocardless.com/bank-account-data/).
 
-For a full list of endpoints and arguments, see the [docs](https://nordigen.com/en/account_information_documenation/api-documention/overview/).
+For a full list of endpoints and arguments, see the [docs](https://developer.gocardless.com/bank-account-data/quick-start-guide).
 
-Before starting to use API you will need to create a new secret and get your `SECRET_ID` and `SECRET_KEY` from the [Nordigen's Open Banking Portal](https://ob.nordigen.com/user-secrets/).
+Before starting to use API you will need to create a new secret and get your `SECRET_ID` and `SECRET_KEY` from the [Nordigen's Open Banking Portal](https://bankaccountdata.gocardless.com/user-secrets/).
 
 
 ## Requirements
@@ -32,7 +32,7 @@ require_once('vendor/autoload.php');
 ```
 
 ```php
-// Get secretId and secretKey from ob.nordigen.com portal and pass them to NordigenClient
+// Get secretId and secretKey from bankaccoutndata.gocardless.com portal and pass them to NordigenClient
 $secretId  = "YOUR_SECRET_ID";
 $secretKey = "YOUR_SECRET_KEY";
 
@@ -98,8 +98,14 @@ $transactions = $account->getAccountTransactions("2021-12-01", "2022-01-30");
 $premiumTransactions = $account->getPremiumAccountTransactions();
 ```
 
-In order to use Premium endpoin please contact our [support](support@nordigen.com)
+In order to use Premium endpoin please contact our [bank-account-data-support@gocardless.com](bank-account-data-support@gocardless.com)
+
+## Tests
+
+```php
+./vendor/bin/phpunit
+```
 
 ## Support
 
-For any inquiries please contact support at [support@nordigen.com](support@nordigen.com) or create an issue in the repository.
+For any inquiries please contact support at [bank-account-data-support@gocardless.com](bank-account-data-support@gocardless.com) or create an issue in the repository.
