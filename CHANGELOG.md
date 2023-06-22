@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.3] - 2023-06-22
+## [1.1.1] - 2023-06-22
 
 - Changed outdated Nordigen URLs to GoCardless
 
