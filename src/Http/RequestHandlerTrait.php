@@ -12,6 +12,8 @@ trait RequestHandlerTrait
     protected ClientInterface $httpClient;
     protected string $baseUri;
 
+    protected ?string $accessToken = null;
+
     public function get(string $uri, array $options = []): ResponseInterface
     {
         try {
@@ -50,5 +52,26 @@ trait RequestHandlerTrait
         } catch (BadResponseException $exc) {
             ExceptionHandler::handleException($exc->getResponse());
         }
+    }
+
+    /**
+     * Get access token
+     *
+     * @return string
+     */
+    public function getAccessToken(): string
+    {
+        return $this->accessToken;
+    }
+
+    /**
+     * Set existing access token.
+     * @param string $accessToken
+     *
+     * @return void
+     */
+    public function setAccessToken(string $accessToken): void
+    {
+        $this->accessToken = $accessToken;
     }
 }
