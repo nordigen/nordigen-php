@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.2] - 2024-02-13
+
+- Changed BASE_URL from ob to bankaccountdata
+
 ## [1.1.1] - 2023-06-22
 
 - Changed outdated Nordigen URLs to GoCardless
