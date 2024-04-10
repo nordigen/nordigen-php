@@ -81,7 +81,7 @@ class NordigenIntegrationTest extends TestCase
                 "countries": [
                     "DE"
                 ],
-                "logo": "https://cdn.nordigen.com/ais/ABNAMRO_FTSBDEFAXXX.png"
+                "logo": "https://cdn-logos.gocardless.com/ais/ABNAMRO_FTSBDEFAXXX.png"
             }';
         $response = new Response(200, [], $responseBody);
         self::$mock->append($response);
@@ -104,7 +104,7 @@ class NordigenIntegrationTest extends TestCase
                     "countries": [
                         "DE"
                     ],
-                    "logo": "https://cdn.nordigen.com/ais/ABNAMRO_FTSBDEFAXXX.png"
+                    "logo": "https://cdn-logos.gocardless.com/ais/ABNAMRO_FTSBDEFAXXX.png"
                 },
                 {
                     "id": "SOMETHING",
