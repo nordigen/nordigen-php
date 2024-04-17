@@ -31,7 +31,7 @@
     <script>
         const config = {
             redirectUrl: 'https://www.nordigen.com',
-            logoUrl: 'https://cdn.nordigen.com/ais/Nordigen_Logo_Black.svg',
+            logoUrl: 'https://cdn-logos.gocardless.com/ais/Nordigen_Logo_Black.svg',
             countryFilter: true,
 			styles: {
 				fontFamily: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap',
