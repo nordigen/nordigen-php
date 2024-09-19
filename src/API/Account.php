@@ -7,6 +7,7 @@ use Nordigen\NordigenPHP\API\RequestHandler;
 class Account {
 
     private RequestHandler $requestHandler;
+    private string $accountId;
 
     public function __construct(RequestHandler $requestHandler, string $accountId) {
         $this->requestHandler = $requestHandler;
