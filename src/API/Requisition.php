@@ -15,12 +15,19 @@ class Requisition
 
     /**
      * Get all requisitions associated with your company.
+     * @param int $limit the max amount of results to be returned
+     * @param int $offset what index to get the limit amount of results from.
      *
      * @return array
      */
-    public function getRequisitions(): array
+    public function getRequisitions(int $limit = 100, int $offset = 0): array
     {
-        $response = $this->requestHandler->get('requisitions/');
+        $response = $this->requestHandler->get('requisitions/', [
+            'query' => [
+                'limit' => (int) $limit,
+                'offset' => (int) $offset,
+            ]
+        ]);
         $json = json_decode($response->getBody()->getContents(), true);
         return $json;
     }
