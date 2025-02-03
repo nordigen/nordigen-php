@@ -80,8 +80,8 @@ class Account {
             $exp = $exception;
         }
 
-        $this->rateLimit = $response->getHeader("http_x_ratelimit_account_success_limit")[0];
-        $this->rateLimitRemaining = $response->getHeader("http_x_ratelimit_account_success_remaining")[0];
+        $this->rateLimit = $response->getHeader("http_x_ratelimit_account_success_limit")[0] ?? 0;
+        $this->rateLimitRemaining = $response->getHeader("http_x_ratelimit_account_success_remaining")[0] ?? 0;
 
         if ($exp !== null) {
             throw $exp;
