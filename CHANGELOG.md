@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.3] - 2025-04-07
+
+- Add maintenance notice to README
+
 ## [1.1.2] - 2024-02-13
 
 - Changed BASE_URL from ob to bankaccountdata
