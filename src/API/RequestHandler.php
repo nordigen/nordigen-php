@@ -11,6 +11,7 @@ class RequestHandler
     use RequestHandlerTrait;
 
     private string $accessToken;
+    private array $authentication;
 
     public function __construct(string $baseUri, string $secretId, string $secretKey, ?ClientInterface $client)
     {

@@ -271,6 +271,9 @@ tmtags
 !.vscode/extensions.json
 *.code-workspace
 
+## JetBrains
+.idea/
+
 # Local History for Visual Studio Code
 .history/
 
